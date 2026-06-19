@@ -38,4 +38,4 @@ jobs:
         run: |
           /Users/christianbernal/Downloads/proyecto_docker_compose_limpio
           docker compose pull backend
-          docker compose up -d backen
+          docker compose up -d backend
