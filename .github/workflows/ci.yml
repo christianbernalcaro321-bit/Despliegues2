@@ -30,3 +30,12 @@ jobs:
         run: docker push chriscaro/backend-springboot:latest
       - name: Verificar JAR generado
         run: ls -la target
+  deploy-backend:
+    runs-on: self-hosted
+    needs: build-backend
+    steps:
+      - name: Actualzar contenedor backend
+        run: |
+          /Users/christianbernal/Downloads/proyecto_docker_compose_limpio
+          docker compose pull backend
+          docker compose up -d backend

@@ -12,7 +12,8 @@ services:
 
   backend:
     build: ./test15b
-    container_name: backend-spring
+    image: chriscaro/backend-springboot:latest
+    container_name: backend-springboot
     ports:
       - "8090:8080"
     depends_on:
