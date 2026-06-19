@@ -36,6 +36,6 @@ jobs:
     steps:
       - name: Actualzar contenedor backend
         run: |
-          /Users/christianbernal/Downloads/proyecto_docker_compose_limpio
+          cd /Users/christianbernal/Downloads/proyecto_docker_compose_limpio
           docker compose pull backend
           docker compose up -d backend
