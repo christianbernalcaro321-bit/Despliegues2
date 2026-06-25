@@ -43,7 +43,7 @@ public class testController {
             @RequestParam int numero1,
             @RequestParam int numero2) {
 
-        return numero1 / numero2;
+        return numero1 / numero2
     }
 	
 	@GetMapping(value="/lista")
