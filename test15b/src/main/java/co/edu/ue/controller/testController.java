@@ -38,7 +38,7 @@ public class testController {
 
         return numero1 * numero2;
     }
-	@GetMapping(value="/Division")
+	@GetMapping(value="/divide")
     public int divide(
             @RequestParam int numero1,
             @RequestParam int numero2) {
