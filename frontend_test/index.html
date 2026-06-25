@@ -18,7 +18,7 @@
     <button onclick="sumar()">Sumar</button>
     <button onclick="multiply()">Multiplicar</button>
     <button onclick="divide()">Dividir</button>
-    <p id="resultadoDivision"></p>
+    <p id="resultadoSuma"></p>
 
     <h2>Lista desde base de datos</h2>
     <button onclick="listar()">Consultar /lista</button>
@@ -72,10 +72,10 @@
             fetch(`${API_URL}/divide?numero1=${numero1}&numero2=${numero2}`)
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("resultadoDivision").innerText = "Resultado: " + data;
+                    document.getElementById("resultadoSuma").innerText = "Resultado: " + data;
                 })
                 .catch(error => {
-                    document.getElementById("resultadoDivision").innerText = "Error al consumir /divide";
+                    document.getElementById("resultadoSuma").innerText = "Error al consumir /divide";
                     console.error(error);
                 });
         }
