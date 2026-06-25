@@ -30,6 +30,14 @@ public class testController {
 
         return numero1 + numero2;
     }
+
+	@GetMapping(value="/multiply")
+    public int multiply(
+            @RequestParam int numero1,
+            @RequestParam int numero2) {
+
+        return numero1 * numero2;
+    }
 	
 	@GetMapping(value="/lista")
 	public List<Prueba> getTesting(){

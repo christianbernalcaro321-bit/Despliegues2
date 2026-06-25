@@ -16,6 +16,7 @@
     <input type="number" id="numero1" placeholder="Número 1">
     <input type="number" id="numero2" placeholder="Número 2">
     <button onclick="sumar()">Sumar</button>
+    <button onclick="multiply()">Multiplicar</button>
     <p id="resultadoSuma"></p>
 
     <h2>Lista desde base de datos</h2>
@@ -47,6 +48,20 @@
                 })
                 .catch(error => {
                     document.getElementById("resultadoSuma").innerText = "Error al consumir /sumar";
+                    console.error(error);
+                });
+        }
+
+        function multiply() {
+            const numero1 = document.getElementById("numero1").value;
+            const numero2 = document.getElementById("numero2").value;
+            fetch(`${API_URL}/multiply?numero1=${numero1}&numero2=${numero2}`)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("resultadoSuma").innerText = "Resultado: " + data;
+                })
+                .catch(error => {
+                    document.getElementById("resultadoSuma").innerText = "Error al consumir /multiply";
                     console.error(error);
                 });
         }
