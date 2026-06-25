@@ -26,6 +26,7 @@ services:
 
   frontend:
     build: ./frontend_test
+    image: chriscaro/frontend-html:latest
     container_name: frontend-html
     ports:
       - "8081:80"
