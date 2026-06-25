@@ -38,6 +38,13 @@ public class testController {
 
         return numero1 * numero2;
     }
+	@GetMapping(value="/Division")
+    public int divide(
+            @RequestParam int numero1,
+            @RequestParam int numero2) {
+
+        return numero1 / numero2;
+    }
 	
 	@GetMapping(value="/lista")
 	public List<Prueba> getTesting(){
